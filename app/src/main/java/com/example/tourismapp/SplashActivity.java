@@ -31,8 +31,7 @@ public class SplashActivity extends AppCompatActivity {
             Pair[] pairs = new Pair[1];
             pairs[0] = new Pair<View, String>(image, "logo_image");
 
-            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation (
-                    SplashActivity.this, pairs);
+            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation (SplashActivity.this, pairs);
             startActivity(splash, options.toBundle());
         }, 2000);
     }
