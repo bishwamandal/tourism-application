@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.TourismApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorAccent">@color/dolly</item>
+        <item name="android:statusBarColor">@color/dolly</item>
+
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+</resources>
