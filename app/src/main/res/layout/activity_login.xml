@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:layout_marginBottom="6dp"
-        android:background="transparent"
+        android:backgroundTint="@color/button_transparent"
         android:layout_gravity="end"
         android:text="FORGOT PASSWORD?"
         android:textSize="14sp"

@@ -12,4 +12,5 @@
     <color name="card_primary">#5bd0c2</color>
     <color name="card_secondary">#fff484</color>
     <color name="card_tertiary">#FF5722</color>
+    <color name="button_transparent">#FEFAFD</color>
 </resources>
