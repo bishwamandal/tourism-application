@@ -6,7 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="30dp"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    android:paddingStart="36dp"
+    android:paddingEnd="36dp"
     tools:context=".LoginActivity">
 
     <com.google.android.material.card.MaterialCardView
@@ -32,6 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:layout_marginStart="4dp"
         android:text="Phone Number"
         android:textColor="@color/secondary_text"
         android:fontFamily="@font/sf_pro_display_medium"/>
@@ -57,6 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:layout_marginStart="4dp"
         android:text="Password"
         android:textColor="@color/secondary_text"
         android:fontFamily="@font/sf_pro_display_medium"/>
