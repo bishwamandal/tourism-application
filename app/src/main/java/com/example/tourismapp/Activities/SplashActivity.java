@@ -1,4 +1,4 @@
-package com.example.tourismapp;
+package com.example.tourismapp.Activities;
 
 import android.annotation.SuppressLint;
 import android.app.ActivityOptions;
@@ -10,6 +10,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.tourismapp.R;
 import com.google.android.material.card.MaterialCardView;
 
 @SuppressLint("CustomSplashScreen")

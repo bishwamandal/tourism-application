@@ -1,8 +1,10 @@
-package com.example.tourismapp;
+package com.example.tourismapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.tourismapp.R;
 
 public class MainActivity extends AppCompatActivity {
 

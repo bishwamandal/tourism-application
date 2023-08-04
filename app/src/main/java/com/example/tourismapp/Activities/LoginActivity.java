@@ -1,4 +1,4 @@
-package com.example.tourismapp;
+package com.example.tourismapp.Activities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.tourismapp.R;
 
 public class LoginActivity extends AppCompatActivity {
 
