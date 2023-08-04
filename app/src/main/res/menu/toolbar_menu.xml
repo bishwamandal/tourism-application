@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/toolbar_userprofile"
+        android:icon="@drawable/ic_account"
+        android:iconTint="@color/accent_icon"
+        android:title="User Profile"
+        app:showAsAction="always"/>
+
+</menu>
