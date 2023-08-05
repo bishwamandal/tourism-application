@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:icon="@drawable/ic_home"
+        android:iconTint="@color/accent_icon"
+        android:title="Home"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/bottom_account"
+        android:icon="@drawable/ic_account"
+        android:iconTint="@color/accent_icon"
+        android:title="Profile"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/bottom_places"
+        android:icon="@drawable/ic_places"
+        android:iconTint="@color/accent_icon"
+        android:title="Places"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/bottom_logout"
+        android:icon="@drawable/ic_logout"
+        android:iconTint="@color/accent_icon"
+        android:title="Logout"
+        app:showAsAction="always"/>
+
+</menu>
