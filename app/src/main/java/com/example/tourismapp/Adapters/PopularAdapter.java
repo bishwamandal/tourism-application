@@ -3,14 +3,17 @@ package com.example.tourismapp.Adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners;
 import com.example.tourismapp.Domains.PopularDomain;
 import com.example.tourismapp.R;
-import com.google.android.material.card.MaterialCardView;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -22,7 +25,7 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
 
     public PopularAdapter(ArrayList<PopularDomain> items) {
         this.items = items;
-        formatter = new DecimalFormat("###,###,###,###");
+        formatter = new DecimalFormat("###,###,###");
     }
 
     @NonNull
@@ -37,7 +40,13 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
         holder.placenameTxt.setText(items.get(position).getTitle());
         holder.addressTxt.setText(items.get(position).getLocation());
 
+        int drawableResId = holder.itemView.getResources().getIdentifier(items.get(position).getPic(),
+                "drawable", holder.itemView.getContext().getPackageName());
 
+        Glide.with(holder.itemView.getContext())
+                .load(drawableResId)
+                .transform(new CenterCrop(), new GranularRoundedCorners(25, 25, 25, 25))
+                .into(holder.placeimage);
     }
 
     @Override
@@ -47,7 +56,7 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView placenameTxt, addressTxt;
-        MaterialCardView placeimage;
+        ImageView placeimage;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
