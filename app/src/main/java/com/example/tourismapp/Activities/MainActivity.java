@@ -3,6 +3,7 @@ package com.example.tourismapp.Activities;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,13 +28,18 @@ public class MainActivity extends AppCompatActivity {
 
     private void initRecyclerView() {
         ArrayList<PopularDomain> items = new ArrayList<>();
-        items.add(new PopularDomain("Place Name","Full Location Address", "ic_carousel1"));
-        items.add(new PopularDomain("Place Name","Full Location Address", "ic_carousel2"));
-        items.add(new PopularDomain("Place Name","Full Location Address", "ic_carousel3"));
-        items.add(new PopularDomain("Place Name","Full Location Address", "ic_carousel4"));
+        items.add(new PopularDomain("Place Name","Location", "ic_carousel1"));
+        items.add(new PopularDomain("Place Name","Location", "ic_carousel2"));
+        items.add(new PopularDomain("Place Name","Location", "ic_carousel3"));
+        items.add(new PopularDomain("Place Name","Location", "ic_carousel4"));
+        items.add(new PopularDomain("Place Name","Location", "ic_carousel1"));
+        items.add(new PopularDomain("Place Name","Location", "ic_carousel2"));
+        items.add(new PopularDomain("Place Name","Location", "ic_carousel3"));
+        items.add(new PopularDomain("Place Name","Location", "ic_carousel4"));
 
         recyclerView = findViewById(R.id.view_pop);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        //recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         adapterPopular = new PopularAdapter(items);
         recyclerView.setAdapter(adapterPopular);
     }
