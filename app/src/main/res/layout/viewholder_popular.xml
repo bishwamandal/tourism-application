@@ -22,7 +22,7 @@
                 android:id="@+id/placeimg"
                 android:layout_width="match_parent"
                 android:layout_height="196dp"
-                app:srcCompat="@drawable/ic_carousel5"
+                app:srcCompat="@drawable/ic_carousel1"
                 android:scaleType="centerCrop" />
 
             <LinearLayout
@@ -42,7 +42,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Place Name"
-                        android:textAppearance="?attr/textAppearanceTitleLarge"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
                         android:textColor="@color/secondary_text"
                         android:fontFamily="@font/sf_pro_display_semibold"/>
 
@@ -51,14 +51,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Full Location Address"
-                        android:textAppearance="?attr/textAppearanceBodyMedium"
-                        android:fontFamily="@font/sf_pro_display_semibold"/>
+                        android:textAppearance="?attr/textAppearanceBodySmall"
+                        android:fontFamily="@font/sf_pro_display_medium"/>
 
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_marginTop="8dp"
                     android:scaleType="fitCenter"
                     app:srcCompat="@drawable/ic_fav_outlined"/>

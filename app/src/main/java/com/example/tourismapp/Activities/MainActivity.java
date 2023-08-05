@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void initRecyclerView() {
         ArrayList<PopularDomain> items = new ArrayList<>();
-        items.add(new PopularDomain("Place Name","Full Location Address", "pic1"));
-        items.add(new PopularDomain("Place Name","Full Location Address", "pic2"));
-        items.add(new PopularDomain("Place Name","Full Location Address", "pic3"));
-        items.add(new PopularDomain("Place Name","Full Location Address", "pic4"));
+        items.add(new PopularDomain("Place Name","Full Location Address", "ic_carousel1"));
+        items.add(new PopularDomain("Place Name","Full Location Address", "ic_carousel2"));
+        items.add(new PopularDomain("Place Name","Full Location Address", "ic_carousel3"));
+        items.add(new PopularDomain("Place Name","Full Location Address", "ic_carousel4"));
 
         recyclerView = findViewById(R.id.view_pop);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
