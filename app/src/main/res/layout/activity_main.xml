@@ -94,7 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:menu="@menu/bottom_menu"
-                app:labelVisibilityMode="selected"/>
+                app:labelVisibilityMode="unlabeled"/>
 
         </com.google.android.material.bottomappbar.BottomAppBar>
 
