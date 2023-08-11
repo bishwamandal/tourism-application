@@ -2,6 +2,10 @@ package com.example.tourismapp.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -11,6 +15,7 @@ import com.example.tourismapp.Adapters.PopularAdapter;
 import com.example.tourismapp.Domains.PopularDomain;
 import com.example.tourismapp.R;
 import com.example.tourismapp.databinding.ActivityMainBinding;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.ArrayList;
@@ -18,7 +23,6 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
-
     private RecyclerView.Adapter adapterPopular;
     private RecyclerView recyclerView;
 
@@ -27,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_main);
+
+        MaterialToolbar toolbar = findViewById(R.id.topAppBar);
+        setSupportActionBar(toolbar);
 
         initRecyclerView();
 
@@ -55,6 +62,23 @@ public class MainActivity extends AppCompatActivity {
     public void finishActivity() {
         Intent logout = new Intent(this, LoginActivity.class);
         startActivity(logout);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        if (item.getItemId() == R.id.toolbar_userprofile) {
+            Intent profile = new Intent(MainActivity.this, ProfileActivity.class);
+            startActivity(profile);
+        } else {
+            Toast.makeText(MainActivity.this, "Not Working!", Toast.LENGTH_SHORT).show();
+        }
+        return true;
     }
 
     private void initRecyclerView() {
