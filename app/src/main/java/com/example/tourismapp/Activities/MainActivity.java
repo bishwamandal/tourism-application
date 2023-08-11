@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+
     private RecyclerView.Adapter adapterPopular;
     private RecyclerView recyclerView;
 

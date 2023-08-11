@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    android:paddingStart="36dp"
+    android:paddingEnd="36dp"
+    tools:context=".Activities.ProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            app:cardCornerRadius="108dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/tourism_app_icon"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Full Name"
+        android:textColor="@color/secondary_text"
+        android:fontFamily="@font/sf_pro_display_medium"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/profile_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_person"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/accent_icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="4dp"
+        android:text="Phone Number"
+        android:textColor="@color/secondary_text"
+        android:fontFamily="@font/sf_pro_display_medium"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/profile_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_phone"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/accent_icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="4dp"
+        android:text="Email"
+        android:textColor="@color/secondary_text"
+        android:fontFamily="@font/sf_pro_display_medium"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/profile_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_email"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/accent_icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="4dp"
+        android:text="Password"
+        android:textColor="@color/secondary_text"
+        android:fontFamily="@font/sf_pro_display_medium"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/profile_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/accent_icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
