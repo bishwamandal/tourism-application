@@ -3,6 +3,7 @@ package com.example.tourismapp.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,6 +26,14 @@ public class DetailActivity extends AppCompatActivity {
 
         initView();
         setVariable();
+
+        backBtn = findViewById(R.id.detailed_toolbar);
+        backBtn.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     private void setVariable() {

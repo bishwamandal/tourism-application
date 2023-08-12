@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -32,28 +33,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         topAppBar = findViewById(R.id.topAppBar);
-        setSupportActionBar(topAppBar);
+        topAppBar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent profile = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(profile);
+            }
+        });
 
         initRecyclerView();
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.toolbar_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.toolbar_userprofile) {
-            Intent profile = new Intent(this, ProfileActivity.class);
-            startActivity(profile);
-            return true;
-        } else {
-            return super.onOptionsItemSelected(item);
-        }
     }
 
     private void initRecyclerView() {

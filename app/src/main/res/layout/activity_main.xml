@@ -22,8 +22,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:title="@string/app_name"
                 app:titleCentered="true"
-                app:navigationIcon="@drawable/ic_menu"
-                app:menu="@menu/toolbar_menu"/>
+                app:navigationIcon="@drawable/ic_account"/>
 
             <com.google.android.material.search.SearchBar
                 android:layout_width="match_parent"
