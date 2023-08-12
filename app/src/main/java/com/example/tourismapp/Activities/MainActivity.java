@@ -22,7 +22,6 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
     MaterialToolbar topAppBar;
     private RecyclerView.Adapter adapterPopular;
     private RecyclerView recyclerView;
