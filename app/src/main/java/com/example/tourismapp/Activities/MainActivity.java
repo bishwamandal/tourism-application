@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -46,8 +47,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        topAppBar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if (item.getItemId() == R.id.toolbar_userprofile) {
+                    accountProfile();
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        });
+
         initRecyclerView();
 
+    }
+
+    private void accountProfile() {
+        Intent accountprofile = new Intent(MainActivity.this, ProfileActivity.class);
+        startActivity(accountprofile);
     }
 
     private void showDialog() {
@@ -84,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Logout", Toast.LENGTH_SHORT).show();
+                userLogout();
             }
         });
 
@@ -93,6 +111,20 @@ public class MainActivity extends AppCompatActivity {
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.getWindow().setGravity(Gravity.BOTTOM);
+    }
+
+    private void userLogout() {
+        new MaterialAlertDialogBuilder(this)
+                .setTitle("Logout")
+                .setMessage("Do you want to logout?")
+                .setPositiveButton("Yes", (dialogInterface, i) -> finishActivity())
+                .setNegativeButton("No", (dialogInterface, i) -> dialogInterface.dismiss())
+                .show();
+    }
+
+    private void finishActivity() {
+        Intent log_out = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(log_out);
     }
 
     private void initRecyclerView() {
