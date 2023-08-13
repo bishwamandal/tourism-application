@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_accent">
+
+    <TextView
+        android:id="@+id/bottom_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Options"
+        android:textSize="24sp"
+        android:textColor="@color/secondary_text"
+        android:textAlignment="center"
+        android:fontFamily="@font/sf_pro_display_medium"/>
+
+    <LinearLayout
+        android:id="@+id/LayoutHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="9dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:text="Home"
+            android:textSize="18sp"
+            android:fontFamily="@font/sf_pro_display_medium"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LayoutAllPlaces"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="9dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_places"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:text="All Places"
+            android:textSize="18sp"
+            android:fontFamily="@font/sf_pro_display_medium"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LayoutProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="9dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_account"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:text="Profile"
+            android:textSize="18sp"
+            android:fontFamily="@font/sf_pro_display_medium"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LayoutLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="9dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_logout"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:text="Logout"
+            android:textSize="18sp"
+            android:fontFamily="@font/sf_pro_display_medium"/>
+
+    </LinearLayout>
+
+</LinearLayout>
