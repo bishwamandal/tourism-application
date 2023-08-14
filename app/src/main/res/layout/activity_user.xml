@@ -6,13 +6,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activities.ProfileActivity">
+    tools:context=".Activities.UserActivity">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/profile_toolbar"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:navigationIcon="@drawable/ic_arrow_back" />
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/user_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_arrow_back" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/logoImage"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="48dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="48dp"
+        app:strokeWidth="0dp"
+        android:elevation="0dp"
+        android:transitionName="logo_image">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:src="@drawable/tourism_app_icon"/>
+
+    </com.google.android.material.card.MaterialCardView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,39 +52,17 @@
         android:paddingStart="36dp"
         android:paddingEnd="36dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="84dp"
-                android:layout_height="84dp"
-                app:cardCornerRadius="108dp"
-                app:cardElevation="0dp"
-                app:strokeWidth="0dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                tools:ignore="MissingConstraints">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/tourism_app_icon"/>
-
-            </com.google.android.material.card.MaterialCardView>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="4dp"
             android:text="Full Name"
             android:textColor="@color/secondary_text"
             android:fontFamily="@font/sf_pro_display_medium"/>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/profile_fullname"
+            android:id="@+id/textInputLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:startIconDrawable="@drawable/ic_person"
@@ -66,7 +73,7 @@
                 android:id="@+id/fullname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:text="Joey Bing"
                 tools:ignore="SpeakableTextPresentCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -74,14 +81,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="24dp"
             android:layout_marginStart="4dp"
             android:text="Phone Number"
             android:textColor="@color/secondary_text"
             android:fontFamily="@font/sf_pro_display_medium"/>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/profile_phone"
+            android:id="@+id/textInputLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:startIconDrawable="@drawable/ic_phone"
@@ -89,10 +96,11 @@
             app:endIconTint="@color/accent_icon">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/phoneNumber"
+                android:id="@+id/userphone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:text="1122334455"
                 tools:ignore="SpeakableTextPresentCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -100,14 +108,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="24dp"
             android:layout_marginStart="4dp"
-            android:text="Email"
+            android:text="Email ID"
             android:textColor="@color/secondary_text"
             android:fontFamily="@font/sf_pro_display_medium"/>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/profile_email"
+            android:id="@+id/textInputLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:startIconDrawable="@drawable/ic_email"
@@ -115,38 +123,15 @@
             app:endIconTint="@color/accent_icon">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/email"
+                android:id="@+id/phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="abc@example.com"
                 tools:ignore="SpeakableTextPresentCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginStart="4dp"
-            android:text="Password"
-            android:textColor="@color/secondary_text"
-            android:fontFamily="@font/sf_pro_display_medium"/>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/profile_pass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:startIconDrawable="@drawable/ic_lock"
-            app:endIconMode="password_toggle"
-            app:endIconTint="@color/accent_icon">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/pass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                tools:ignore="SpeakableTextPresentCheck" />
-
-        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 

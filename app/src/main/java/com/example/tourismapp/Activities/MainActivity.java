@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void accountProfile() {
-        Intent accountprofile = new Intent(MainActivity.this, ProfileActivity.class);
-        startActivity(accountprofile);
+        Intent account = new Intent(MainActivity.this, UserActivity.class);
+        startActivity(account);
     }
 
     private void showDialog() {
@@ -90,14 +90,16 @@ public class MainActivity extends AppCompatActivity {
         places.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "All Places", Toast.LENGTH_SHORT).show();
+                Intent allplaces = new Intent(MainActivity.this, PlacesActivity.class);
+                startActivity(allplaces);
             }
         });
 
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Profile", Toast.LENGTH_SHORT).show();
+                Intent userprofile = new Intent(MainActivity.this, UserActivity.class);
+                startActivity(userprofile);
             }
         });
 
