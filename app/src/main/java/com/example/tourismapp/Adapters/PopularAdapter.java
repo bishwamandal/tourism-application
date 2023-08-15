@@ -71,4 +71,5 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
             placeimage = itemView.findViewById(R.id.placeimg);
         }
     }
+
 }

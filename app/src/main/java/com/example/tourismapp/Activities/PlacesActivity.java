@@ -14,6 +14,7 @@ import com.example.tourismapp.Adapters.PopularAdapter;
 import com.example.tourismapp.Domains.PopularDomain;
 import com.example.tourismapp.R;
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 
@@ -29,12 +30,7 @@ public class PlacesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_places);
 
         back = findViewById(R.id.places_toolbar);
-        back.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        back.setNavigationOnClickListener(view -> finish());
 
         initRecyclerView();
     }
