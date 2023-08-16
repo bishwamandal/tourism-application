@@ -9,16 +9,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.tourismapp.Adapters.PopularAdapter;
 import com.example.tourismapp.Domains.PopularDomain;
 import com.example.tourismapp.R;
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class PlacesActivity extends AppCompatActivity {
 
+    private FloatingActionButton addbtn;
     private MaterialToolbar back;
     private RecyclerView.Adapter adapterPopular;
     private RecyclerView recyclerView;
@@ -27,6 +30,11 @@ public class PlacesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_places);
+
+        addbtn = findViewById(R.id.addNewPlaces);
+        addbtn.setOnClickListener(view -> {
+            Toast.makeText(this, "Working!", Toast.LENGTH_SHORT).show();
+        });
 
         back = findViewById(R.id.places_toolbar);
         back.setNavigationOnClickListener(new View.OnClickListener() {
