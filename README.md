@@ -6,7 +6,7 @@ Technologies Used:
 1. Android SDK
 2. Java
 3. XML
-4. Firebase
+4. Firebase(Realtime Database)
 
 Currently, we are just going with three basic screens/activities for the tourism app:
 1. Splash Screen
