@@ -6,8 +6,11 @@ Technologies Used:
 1. Android SDK
 2. Java
 3. XML
+4. SQLite
 
 Currently, we are just going with three basic screens/activities for the tourism app:
 1. Splash Screen
 2. Login Screen
-3. Main Activity
+3. Home Screen/Main Activity
+4. Detailed Screen
+5. All Places Screen
