@@ -49,10 +49,10 @@
                 android:clipToPadding="false"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
-                tools:listitem="@layout/viewholder_popular"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:spanCount="2"
-                tools:itemCount="8"/>
+                tools:itemCount="8"
+                tools:listitem="@layout/viewholder_popular" />
 
         </ScrollView>
 
