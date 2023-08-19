@@ -107,16 +107,49 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/submitBtn"
-            style="@style/Widget.Material3.Button.ElevatedButton"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="4dp"
+            android:text="Upload Image"
+            android:textColor="@color/secondary_text"
+            android:fontFamily="@font/sf_pro_display_medium"/>
+
+        <ImageView
+            android:id="@+id/uploadImage"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_marginTop="180dp"
-            android:backgroundTint="@color/downy"
-            android:text="Submit"
-            android:textSize="18sp"
-            android:textColor="@color/primary_text" />
+            android:layout_height="144dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="18dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/selectImage"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:layout_marginRight="6dp"
+                android:backgroundTint="@color/dolly"
+                android:text="Select Image"
+                android:textSize="18sp"
+                android:textColor="@color/primary_text"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submitBtn"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginLeft="6dp"
+                android:backgroundTint="@color/downy"
+                android:text="Submit"
+                android:textSize="18sp"
+                android:textColor="@color/primary_text" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
