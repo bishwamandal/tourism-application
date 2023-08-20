@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void login() {
         b.setOnClickListener(view -> {
-            if (n.getText().toString().equals("1122334455") && p.getText().toString().equals("admin")) {
+            if (n.getText().toString().equals("12345") && p.getText().toString().equals("admin")) {
 
                 Intent login = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(login);

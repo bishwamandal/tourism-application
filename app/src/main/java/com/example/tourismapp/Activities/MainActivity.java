@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -33,6 +34,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     MaterialToolbar topAppBar;
+    TextView seeAll;
     private RecyclerView.Adapter adapterPopular;
     private RecyclerView recyclerView;
 
@@ -47,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 showDialog();
             }
+        });
+
+        seeAll = findViewById(R.id.textView2);
+        seeAll.setOnClickListener(view -> {
+            Intent allplaces = new Intent(MainActivity.this, PlacesActivity.class);
+            startActivity(allplaces);
         });
 
         topAppBar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
