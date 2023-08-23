@@ -138,21 +138,21 @@ public class MainActivity extends AppCompatActivity {
     private void initRecyclerView() {
         ArrayList<PopularDomain> items = new ArrayList<>();
         items.add(new PopularDomain(
-                "City Palace","Jaipur, Rajasthan", "ic_carousel1", "Historic palace complex with museums, courtyards, and royal artifacts."));
+                "City Palace","Jaipur, Rajasthan", "ic_jaipur_city_palace", "Historic palace complex with museums, courtyards, and royal artifacts."));
         items.add(new PopularDomain(
-                "Hawa Mahal","Jaipur, Rajasthan", "ic_carousel2", "Iconic palace with intricate windows, offering a view of the city"));
+                "Hawa Mahal","Jaipur, Rajasthan", "ic_hawa_mahal", "Iconic palace with intricate windows, offering a view of the city"));
         items.add(new PopularDomain(
-                "Amber Fort","Jaipur, Rajasthan", "ic_carousel3", "Majestic hilltop fort with stunning architecture and elephant rides."));
+                "Amber Fort","Jaipur, Rajasthan", "ic_amber_fort", "Majestic hilltop fort with stunning architecture and elephant rides."));
         items.add(new PopularDomain(
-                "Jantar Mantar","Jaipur, Rajasthan", "ic_carousel4", "Astronomical observatory with impressive geometric instruments."));
+                "Jantar Mantar","Jaipur, Rajasthan", "ic_jantar_mantar", "Astronomical observatory with impressive geometric instruments."));
         items.add(new PopularDomain(
-                "Lake Palace","Udaipur, Rajasthan", "ic_carousel1", "Romantic hotel on an island in Lake Pichola, showcasing royal heritage."));
+                "Lake Palace","Udaipur, Rajasthan", "ic_lake_palace", "Romantic hotel on an island in Lake Pichola, showcasing royal heritage."));
         items.add(new PopularDomain(
-                "Fateh Sagar Lake","Udaipur, Rajasthan", "ic_carousel2", "Serene lake for boating and leisurely walks."));
+                "Fateh Sagar Lake","Udaipur, Rajasthan", "ic_fateh_sagar_lake", "Serene lake for boating and leisurely walks."));
         items.add(new PopularDomain(
-                "Mehrangarh Fort","Jodhpur, Rajasthan", "ic_carousel3", "Impressive fort offering panoramic views and historical exhibits."));
+                "Mehrangarh Fort","Jodhpur, Rajasthan", "ic_mehrangarh_fort", "Impressive fort offering panoramic views and historical exhibits."));
         items.add(new PopularDomain(
-                "Jaswant Thada","Jodhpur, Rajasthan", "ic_carousel4", "White marble memorial with delicate carvings and gardens."));
+                "Jaswant Thada","Jodhpur, Rajasthan", "ic_jaswant_thada", "White marble memorial with delicate carvings and gardens."));
 
 
         recyclerView = findViewById(R.id.view_pop);
