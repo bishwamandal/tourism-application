@@ -31,7 +31,7 @@
 
                 <ImageView
                     android:id="@+id/detailed_placeImage"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="240dp"
                     android:scaleType="fitCenter"
                     app:layout_constraintBottom_toBottomOf="parent"
