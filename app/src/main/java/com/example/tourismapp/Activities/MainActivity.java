@@ -52,15 +52,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(allplaces);
         });
 
-        topAppBar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                if (item.getItemId() == R.id.toolbar_userprofile) {
-                    accountProfile();
-                    return true;
-                } else {
-                    return false;
-                }
+        topAppBar.setOnMenuItemClickListener(item -> {
+            if (item.getItemId() == R.id.toolbar_userprofile) {
+                accountProfile();
+                return true;
+            } else {
+                return false;
             }
         });
 
