@@ -25,15 +25,6 @@
                 app:navigationIcon="@drawable/ic_menu"
                 app:menu="@menu/toolbar_menu"/>
 
-            <com.google.android.material.search.SearchBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/search_bar"
-                style="@style/Widget.Material3.SearchBar"
-                android:textAppearance="@style/TextAppearance.Material3.SearchBar"
-                app:hideNavigationIcon="false"
-                android:hint="Search" />
-
         </com.google.android.material.appbar.AppBarLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

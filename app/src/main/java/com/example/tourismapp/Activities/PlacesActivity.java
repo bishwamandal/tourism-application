@@ -1,15 +1,12 @@
 package com.example.tourismapp.Activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tourismapp.Adapters.PopularAdapter;
 import com.example.tourismapp.Domains.PopularDomain;
@@ -21,8 +18,6 @@ import java.util.ArrayList;
 
 public class PlacesActivity extends AppCompatActivity {
 
-    private FloatingActionButton addbtn;
-    private MaterialToolbar back;
     private RecyclerView.Adapter adapterPopular;
     private RecyclerView recyclerView;
     @SuppressLint("MissingInflatedId")
@@ -31,18 +26,14 @@ public class PlacesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_places);
 
-        addbtn = findViewById(R.id.addNewPlaces);
+        FloatingActionButton addbtn = findViewById(R.id.addNewPlaces);
         addbtn.setOnClickListener(view -> {
-            Toast.makeText(this, "Working!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(PlacesActivity.this, NewPlaceActivity.class);
+            startActivity(intent);
         });
 
-        back = findViewById(R.id.places_toolbar);
-        back.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        MaterialToolbar back = findViewById(R.id.places_toolbar);
+        back.setNavigationOnClickListener(view -> finish());
 
         initRecyclerView();
     }

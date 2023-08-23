@@ -21,7 +21,7 @@
             <ImageView
                 android:id="@+id/placeimg"
                 android:layout_width="match_parent"
-                android:layout_height="196dp"
+                android:layout_height="144dp"
                 app:srcCompat="@drawable/ic_carousel1"
                 android:scaleType="centerCrop" />
 
